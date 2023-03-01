@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="alert_5.js"></script>
+<script>
+
+    function multiplyNumeric(obj) {
+        for (let key in obj) {
+            if (typeof obj[key] == 'number') {
+                obj[key] *= 2;
+                alert(obj[key])
+            }
+        }
+    }
+
+    multiplyNumeric(menu);
+
+</script>
+
+</html>

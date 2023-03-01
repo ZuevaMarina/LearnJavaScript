@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<meta charset="utf-8">
+<script src="test_8.js"></script>
+<script>
+
+    function formatDate(date) {
+        let now = Date.now();
+        let diff = now - date;
+        let result;
+
+        if (diff/ 1000 < 1) result = "прямо сейчас";
+        else if (diff/ 1000 < 60) result = `${Math.round(diff/1000)} сек. назад`;
+        else if (diff/ (1000 * 3600) < 1) result = `${Math.round(diff/ (1000 * 60))} мин. назад`;
+        else result = `${add(date.getDate())}.${add(date.getMonth()+1)}.${date.getFullYear() - Math.floor(date.getFullYear()/100)*100} ${add(date.getHours())}:${add(date.getMinutes())}`;
+
+        return result;
+
+    }
+    
+    function add(n) {
+        if (n < 10) n = `0${n}`;
+        return n;
+    }
+
+</script>
+
+</html>

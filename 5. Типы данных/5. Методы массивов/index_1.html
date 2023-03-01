@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test_1.js"></script>
+<script>
+
+   function camelize(str) {
+    return str
+    .split('-') 
+    .map(
+      ((element, index) => index ? element[0].toUpperCase() + element.slice(1) : element)
+    )
+    .join(''); 
+}
+
+</script>
+
+</html>

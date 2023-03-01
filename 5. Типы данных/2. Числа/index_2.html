@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="alert_2.js"></script>
+<script>
+
+    function readNumber(num) {
+        let number;
+
+        do {
+            number = prompt(num, "0");
+            if (!number)
+            return null;
+        } while (!isFinite(number));
+        return +number;
+    }
+
+    let number = readNumber("Введите число");
+
+    console.log(number);
+
+</script>
+
+</html>

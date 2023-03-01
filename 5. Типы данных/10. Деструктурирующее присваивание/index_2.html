@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test_2.js"></script>
+<script>
+
+  function topSalary(salaries) {
+    let currentMax = 0;
+    let currentWorker = null;
+  
+    for (let [worker, salary] of Object.entries(salaries)) {
+        if (salary > currentMax) {
+            currentMax = salary;
+            currentWorker = worker;
+        }
+    }
+  
+    return currentWorker;
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test_2.js"></script>
+<script>
+
+    function getWeekDay(date) {
+        let dayOfTheWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+        return dayOfTheWeek[date.getDay()];
+    }
+
+    let date = new Date(2012, 0, 3);  
+    alert( getWeekDay(date) ); 
+
+</script>
+
+</html>

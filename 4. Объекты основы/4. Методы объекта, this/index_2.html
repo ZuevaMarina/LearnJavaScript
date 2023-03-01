@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test_2.js"></script>
+<script>
+
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // показывает текущую ступеньку
+            console.log( this.step );
+            return this;
+        }
+    };
+
+</script>
+
+</html>
