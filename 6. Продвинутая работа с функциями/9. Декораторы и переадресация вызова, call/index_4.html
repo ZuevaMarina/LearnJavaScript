@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="UTF-8">
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="zadacha_4.js"></script>
+<script>
+
+    function throttle(f, ms) {
+        let timer = 0, func = null;
+
+        return function () {
+            func = () => f.apply(this, arguments);
+            if (timer == 0) step();
+
+            function step() {
+                if (func === null) {
+                    timer = 0;
+                    return;
+                }
+
+                func();
+                func = null;
+
+                timer = setTimeout(step, ms);
+            }
+        };
+    }
+
+</script>
+
+</html>

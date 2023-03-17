@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="UTF-8">
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="zadacha_2.js"></script>
+<script>
+
+    function delay(f, ms) {
+
+        return function () {
+            setTimeout(() => f.apply(this, arguments), ms);
+        };
+
+    }
+    let f1000 = delay(alert, 1000);
+
+    f1000("test");
+
+</script>
+
+</html>

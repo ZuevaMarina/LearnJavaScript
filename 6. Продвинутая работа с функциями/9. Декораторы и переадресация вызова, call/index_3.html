@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="UTF-8">
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="zadacha_3.js"></script>
+<script>
+
+    function debounce(f, ms) {
+        let time;
+        return function () {
+            if ((Date.now() - time) < ms) {
+                return;
+            }
+            time = Date.now();
+            f.call(this, ...arguments);
+        }
+    }
+
+</script>
+
+</html>
